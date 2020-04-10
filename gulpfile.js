@@ -24,6 +24,8 @@ const
 
 function index() {
     var templateData = {
+        indexRoot: '/',
+        root: '/'
     },
     options = {
         batch : [src + '/partials'],
@@ -42,6 +44,8 @@ function index() {
 
 function handleB() {
     var templateData = {
+        indexRoot: '/',
+        root: '/'
     },
     options = {
         batch : [src + '/partials'],
@@ -55,7 +59,47 @@ function handleB() {
         .pipe(handlebars(templateData, options))
         .pipe(htmlmin())
         .pipe(rename({ extname: ".html" }))
-        .pipe(gulp.dest(build + 'page/'));
+        .pipe(gulp.dest(build + 'en/'));
+}
+
+function indexTest() {
+    var templateData = {
+        indexRoot: '',
+        root: ''
+    },
+    options = {
+        batch : [src + '/partials'],
+        helpers : {
+
+        }
+    }
+
+    return gulp.src(indexFile)
+        .pipe(cache())
+        .pipe(handlebars(templateData, options))
+        .pipe(htmlmin())
+        .pipe(rename({ extname: ".html" }))
+        .pipe(gulp.dest(build));
+}
+
+function handleBTest() {
+    var templateData = {
+        indexRoot: '',
+        root: '../'
+    },
+    options = {
+        batch : [src + '/partials'],
+        helpers : {
+
+        }
+    }
+
+    return gulp.src(handleFiles)
+        .pipe(cache())
+        .pipe(handlebars(templateData, options))
+        .pipe(htmlmin())
+        .pipe(rename({ extname: ".html" }))
+        .pipe(gulp.dest(build + 'en/'));
 }
 
 function css() {
@@ -78,7 +122,7 @@ function js() {
 }
 
 function clean() {
-    return del([build + 'css', build + 'page', build + 'js', build + 'index.html']);
+    return del([build + 'css', build + 'en', build + 'js', build + 'index.html']);
 }
 
 function watchIndex() {
@@ -104,4 +148,5 @@ exports.js      = js;
 exports.clean   = clean;
 
 exports.build   = gulp.parallel(css, js, handleB, index);
+exports.test    = gulp.parallel(css, js, handleBTest, indexTest);
 exports.default = gulp.series(gulp.parallel(css, js, handleB, index), gulp.parallel(watchIndex, watchHandleB, watchCSS, watchJS));

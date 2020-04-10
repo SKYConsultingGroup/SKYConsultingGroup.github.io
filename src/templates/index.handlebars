@@ -1,7 +1,6 @@
 <html>
     <head>
 		{{> scg_head}}
-        <meta http-equiv="Refresh" content="0; url="/page/home.html" />
     </head>
 
     <body>
@@ -18,5 +17,11 @@
 				{{> scg_footer}}
             </div>
         </div>
+
+    <script>
+        window.onload = function() {
+            window.location = "{{indexRoot}}en/home.html";
+        }
+    </script>
     </body>
 </html>
