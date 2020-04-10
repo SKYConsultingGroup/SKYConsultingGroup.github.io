@@ -55,7 +55,7 @@ function handleB() {
         .pipe(handlebars(templateData, options))
         .pipe(htmlmin())
         .pipe(rename({ extname: ".html" }))
-        .pipe(gulp.dest(build + 'html/'));
+        .pipe(gulp.dest(build + 'page/'));
 }
 
 function css() {
@@ -78,7 +78,7 @@ function js() {
 }
 
 function clean() {
-    return del([build + 'css', build + 'html', build + 'js', build + 'index.html']);
+    return del([build + 'css', build + 'page', build + 'js', build + 'index.html']);
 }
 
 function watchIndex() {
