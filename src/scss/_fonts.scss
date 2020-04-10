@@ -1,0 +1,46 @@
+@mixin base-font {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: $scg_grey;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+
+}
+
+a {
+    @include base-font
+    text-decoration: none;
+    font-weight: 300;
+}
+
+h1 {
+    @include base-font
+    font-weight: 600;
+}
+
+h2 {
+    @include base-font
+    font-weight: 500;
+}
+
+h3 {
+    @include base-font
+    font-weight: 400;
+}
+
+h4 {
+    @include base-font
+    font-weight: 300;
+}
+
+h5 {
+    @include base-font
+    font-weight: 200;
+}
+
+p {
+    @include base-font
+    font-weight: 200;
+    padding: 1.0em;
+}

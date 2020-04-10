@@ -1,0 +1,1 @@
+"use strict";function hamburgerChange(e){e.classList.toggle("change")}

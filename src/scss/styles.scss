@@ -1,0 +1,205 @@
+@import 'colors';
+@import 'fonts';
+@import 'layout';
+
+.scg_container {
+
+    .scg_header {
+
+        .scg_logo { 
+            img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        .scg_nav {
+            overflow: hidden;
+
+            a {
+                float: left;
+                display: block;
+                padding: 2em 2.4em 1em 2.4em;
+
+                font-size: 1.05em;
+
+                transition: 0.4s;
+
+                &:hover {
+                    transform: translate(0px, -8px);
+                    color: $scg_blue;
+                }
+            }
+        }
+
+        .scg_hamburger_container {
+            display: inline-block;
+            cursor: pointer;
+
+            margin-top: 1em;
+
+            .scg_hamburger_line1, .scg_hamburger_line2, .scg_hamburger_line3 {
+                height: 2px;
+                width: 32px;
+                background: $scg_grey;
+                margin: 6px 0;
+                transition: 0.1s;
+            }
+
+            &.change {
+                .scg_hamburger_line1 {
+                    transform: rotate(-45deg) translate(-4px, 3px);
+                    background: $scg_orange;
+                }
+
+                .scg_hamburger_line2 {
+                    opacity: 0;
+                }
+
+                .scg_hamburger_line3 {
+                    transform: rotate(45deg) translate(-8px, -8px);
+                    background: $scg_orange;
+                }
+            }
+        }
+    }
+
+    .scg_content_container {
+        background: $scg_white;
+
+        .scg_content_item {
+            margin-bottom: 5.0em;
+        }
+
+        .scg_image_box {
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            .scg_image_box_exerpt {
+                margin-top: 20%;
+                height: 300px;
+                width: 240px;
+                background: $scg_white;
+
+                text-align: center;
+
+                p {
+                    margin-bottom: 0px;
+                }
+
+                &.scg_orange {
+                    a {
+                        color: $scg_orange;
+                    }
+                }
+
+                &.scg_blue {
+                    a {
+                        color: $scg_blue;
+                    }
+                }
+            }
+        }
+
+        .scg_newsletter_signup {
+            background: $scg_blue;
+
+            height: 120px;
+
+            .scg_signup_box {
+                margin: 0px 0px 0px 1em;
+
+                input[type=text] {
+                    @include base-font
+                    font-weight: 300;
+
+                    border: none;
+                    padding: 8px;
+                }
+
+                input[type=submit] {
+                    @include base-font
+                    font-weight: 400;
+
+                    border: none;
+                    color: $scg_white;
+                    background: $scg_orange;
+                    cursor: pointer;
+                    padding: 8px 10px 8px 10px;
+                }
+            }
+
+            h2 {
+                color: $scg_white;
+            }
+        }
+    }
+
+    .scg_footer {
+
+        .scg_quick_info {
+            span.scg_quick_info_item_bold  {
+                @include base-font
+                font-weight: 300;
+                font-size: 1.05em;
+                color: $scg_dark_grey;
+            }
+
+            span.scg_quick_info_item {
+                @include base-font
+                font-weight: 200;
+                color: $scg_grey;
+            }
+        }
+
+        .scg_legal {
+            text-align: center;
+            padding-top: 7em;
+
+            span.scg_copyright {
+                @include base-font
+                font-weight: 400;
+                font-size: 0.8em;
+                color: $scg_grey;
+            }
+
+            span.scg_legal_links {
+                @include base-font
+                font-weight: 300;
+                font-size: 0.8em;
+                
+                color: $scg_light_grey;
+
+                a {
+                    color: $scg_light_grey;
+                }
+            }
+        }
+
+        .scg_social {
+            text-align: center;
+
+            svg {
+                height: 32px;
+                width: 32px;
+
+                fill: $scg_dark_grey;
+            }
+
+            .social_icon {
+                svg {
+                    transition: 0.4s;
+
+                    &:hover {
+                        transform: rotate(-45deg);
+                        fill: $scg_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'responsive';

@@ -1,0 +1,115 @@
+div {
+
+    &.scg_container {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 160px auto 240px; 
+    }
+
+    &.scg_header {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+
+        display: grid;
+
+        grid-template-columns: 15% auto 10%;
+        grid-template-rows: 100%; 
+
+        place-items: center;
+
+        .scg_logo {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+        }
+
+        .scg_nav {
+            grid-column: 2 / 2;
+            grid-row: 1 / 1;
+        }
+
+        .scg_hamburger {
+            grid-column: 3 / 3;
+            grid-row: 1 / 1;
+        }
+    }
+
+    &.scg_content_container {
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+        
+        display: grid;
+
+        .scg_content_item {
+            display: grid;
+        }
+
+        .scg_image_box {
+            grid-template-columns: 5% auto 30% 5%;
+            grid-template-rows: 100%;
+
+            img {
+                grid-column: 2 / span 2;
+                grid-row: 1 / 1;
+            }
+
+            .scg_image_box_exerpt {
+                grid-column: 3 / 3;
+                grid-row: 1 / 1;
+            }
+        }
+
+        .scg_newsletter_signup {
+            grid-template-columns: auto 50%;
+            grid-template-rows: 100%;
+
+            align-items: center;
+
+            .scg_signup_box {
+                grid-column: 1 / 1;
+                grid-row: 1 / 1;
+
+            }
+
+            h2 {
+                grid-column: 2 / 2;
+                grid-row: 1 / 1;
+
+            }
+        }
+    }
+
+    &.scg_footer {
+        grid-column: 1 / 1;
+        grid-row: 3 / 3;
+
+        display: grid;
+
+        grid-template-columns: 30% auto 30%;
+        grid-template-rows: 100%;
+
+        .scg_quick_info {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+
+            place-self: center;
+        }
+
+        .scg_legal {
+            grid-column: 2 / 2;
+            grid-row: 1 / 1;
+
+            align-self: center;
+            justify-self: center;
+        }
+
+        .scg_social {
+            grid-column: 3 / 3;
+            grid-row: 1 / 1;
+
+            place-self: center;
+        }
+    }
+}
