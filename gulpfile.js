@@ -15,6 +15,7 @@ const
 
     src         = 'src/',
     build       = './',
+	testRoot	= 'C:/Users/JakeI/Documents/Work/Sky Consulting Group/Website/'
 
     cssFiles    = [src + 'scss/*.scss', src + 'scss/*.sass', src + 'scss/*.css'],
     jsFiles     = src + 'js/*.js',
@@ -24,7 +25,6 @@ const
 
 function index() {
     var templateData = {
-        indexRoot: '/',
         root: '/'
     },
     options = {
@@ -44,7 +44,6 @@ function index() {
 
 function handleB() {
     var templateData = {
-        indexRoot: '/',
         root: '/'
     },
     options = {
@@ -64,8 +63,7 @@ function handleB() {
 
 function indexTest() {
     var templateData = {
-        indexRoot: '',
-        root: ''
+        root: testRoot
     },
     options = {
         batch : [src + '/partials'],
@@ -84,8 +82,7 @@ function indexTest() {
 
 function handleBTest() {
     var templateData = {
-        indexRoot: '',
-        root: '../'
+        root: testRoot
     },
     options = {
         batch : [src + '/partials'],

@@ -1,6 +1,9 @@
+$content-margin: 5%;
+
 div {
 
     &.scg_container {
+        height: 100vh;
         width: 100%;
 
         display: grid;
@@ -47,36 +50,49 @@ div {
         }
 
         .scg_image_box {
-            grid-template-columns: 5% auto 30% 5%;
-            grid-template-rows: 100%;
+            grid-template-columns: 0% auto 30% 0%;
+            grid-template-rows: auto 40%;
 
             img {
                 grid-column: 2 / span 2;
-                grid-row: 1 / 1;
+                grid-row: 1 / span 2;
             }
 
             .scg_image_box_exerpt {
                 grid-column: 3 / 3;
-                grid-row: 1 / 1;
+                grid-row: 1 / span 2;
+            }
+
+            .scg_image_box_heading {
+               grid-column: 2 / span 2; 
+               grid-row: 2 / 2;
             }
         }
 
         .scg_newsletter_signup {
-            grid-template-columns: auto 50%;
+            grid-template-columns: $content-margin auto 50% $content-margin;
             grid-template-rows: 100%;
 
             align-items: center;
 
             .scg_signup_box {
-                grid-column: 1 / 1;
+                grid-column: 2 / 2;
                 grid-row: 1 / 1;
-
             }
 
             h2 {
+                grid-column: 3 / 3;
+                grid-row: 1 / 1;
+            }
+        }
+
+        .scg_text_page {
+            grid-template-columns: $content-margin auto $content-margin;
+            grid-template-rows: 100%;
+
+            .scg_text_page_text {
                 grid-column: 2 / 2;
                 grid-row: 1 / 1;
-
             }
         }
     }

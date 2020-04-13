@@ -77,13 +77,21 @@
                 width: 100%;
             }
 
+            h1, h2, h3, h4, h5, h6 {
+                margin: 0px;
+                padding: 1em;
+                background: #383838;
+                color: #ffffff;
+            }
+
+            a {
+                padding: 1em;
+            }
+
             .scg_image_box_exerpt {
                 margin-top: 20%;
                 height: 300px;
-                width: 240px;
                 background: $scg_white;
-
-                text-align: center;
 
                 p {
                     margin-bottom: 0px;
@@ -100,6 +108,12 @@
                         color: $scg_blue;
                     }
                 }
+            }
+
+            .scg_image_box_heading {
+                height: 160px;
+                width: 740px;
+                background: $scg_white;
             }
         }
 
