@@ -14,14 +14,13 @@
         }
 
         .scg_nav {
+            display: none;
             overflow: hidden;
 
             a {
                 float: left;
                 display: block;
-                padding: 2em 2.4em 1em 2.4em;
-
-                font-size: 1.05em;
+                padding: 0.5em 2em;
 
                 transition: 0.4s;
 
@@ -36,13 +35,11 @@
             display: inline-block;
             cursor: pointer;
 
-            margin-top: 1em;
-
             .scg_hamburger_line1, .scg_hamburger_line2, .scg_hamburger_line3 {
                 height: 2px;
                 width: 32px;
                 background: $scg_grey;
-                margin: 6px 0;
+                margin: 0.4em 0;
                 transition: 0.1s;
             }
 
@@ -66,6 +63,7 @@
 
     .scg_content_container {
         background: $scg_white;
+        font-size: 2.4vw;
 
         .scg_content_item {
             margin-bottom: 5.0em;
@@ -89,13 +87,8 @@
             }
 
             .scg_image_box_exerpt {
-                margin-top: 20%;
-                height: 300px;
+                margin-top: 15%;
                 background: $scg_white;
-
-                p {
-                    margin-bottom: 0px;
-                }
 
                 &.scg_orange {
                     a {
@@ -111,26 +104,25 @@
             }
 
             .scg_image_box_heading {
-                height: 160px;
-                width: 740px;
                 background: $scg_white;
+                height: 80%;
             }
         }
 
         .scg_newsletter_signup {
             background: $scg_blue;
 
-            height: 120px;
-
             .scg_signup_box {
-                margin: 0px 0px 0px 1em;
+                margin: 0px;
+                font-size: 2.4vw;
+                padding: 2em 0 2em 0;
 
                 input[type=text] {
                     @include base-font
                     font-weight: 300;
 
                     border: none;
-                    padding: 8px;
+                    padding: 0.5em;
                 }
 
                 input[type=submit] {
@@ -141,7 +133,7 @@
                     color: $scg_white;
                     background: $scg_orange;
                     cursor: pointer;
-                    padding: 8px 10px 8px 10px;
+                    padding: 0.5em;
                 }
             }
 
@@ -154,35 +146,37 @@
     .scg_footer {
 
         .scg_quick_info {
+            display: none;
+
             span.scg_quick_info_item_bold  {
                 @include base-font
                 font-weight: 300;
-                font-size: 1.05em;
+                font-size: 1.8vw;
                 color: $scg_dark_grey;
             }
 
             span.scg_quick_info_item {
                 @include base-font
                 font-weight: 200;
+                font-size: 1.8vw;
                 color: $scg_grey;
             }
         }
 
         .scg_legal {
             text-align: center;
-            padding-top: 7em;
 
             span.scg_copyright {
                 @include base-font
                 font-weight: 400;
-                font-size: 0.8em;
+                font-size: 2.4vw;
                 color: $scg_grey;
             }
 
             span.scg_legal_links {
                 @include base-font
                 font-weight: 300;
-                font-size: 0.8em;
+                font-size: 2.2vw;
                 
                 color: $scg_light_grey;
 
@@ -193,11 +187,12 @@
         }
 
         .scg_social {
+            display: none;
             text-align: center;
 
             svg {
-                height: 32px;
-                width: 32px;
+                height: 3.3vw;
+                width: 3.3vw;
 
                 fill: $scg_dark_grey;
             }

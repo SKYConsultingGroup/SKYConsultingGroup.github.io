@@ -4,29 +4,34 @@
     color: $scg_grey;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-
+a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
     @include base-font
     text-decoration: none;
     font-weight: 300;
+    font-size: 1.8vw;
+    margin: 0px;
+    padding: 0px;
 }
 
 h1 {
     @include base-font
     font-weight: 600;
+    font-size: 2.8vw;
 }
 
 h2 {
     @include base-font
     font-weight: 500;
+    font-size: 2.1vw;
 }
 
 h3 {
     @include base-font
     font-weight: 400;
+    font-size: 2.0vw;
 }
 
 h4 {
@@ -42,5 +47,7 @@ h5 {
 p {
     @include base-font
     font-weight: 200;
+    font-size: 1.7vw;
     padding: 1.0em;
+    margin: 0px;
 }

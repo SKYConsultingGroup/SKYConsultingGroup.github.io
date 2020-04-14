@@ -1,0 +1,74 @@
+/* Golden Rules 
+    - Only define width, let content define height & adjust font sizes as needed
+    - Use 'em' for sizing padding & margins to allow for scaling when font sizes change
+    - Use 'vw' for font sizing (why are more people not doing this?)
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .scg_container {
+        .scg_header {
+            grid-template-columns: 15% auto 10%;
+
+            .scg_logo {
+                grid-column: 1 / span 1;
+            }
+
+            .scg_nav {
+                display: block;
+            }
+
+            .scg_hamburger {
+                grid-column: 3 / span 1;
+            }
+        }
+
+        .scg_content_container {
+
+        }
+
+        .scg_footer {
+            .scg_quick_info {
+                display: block;
+
+            }
+
+            .scg_legal {
+                margin-top: 8em;
+
+                span.scg_copyright {
+                    font-size: 1.4vw;
+                }
+
+                span.scg_legal_links {
+                    font-size: 1.2vw;
+
+                    a {
+                        font-size: 1.2vw;
+                    }
+                }
+            }
+
+            .scg_social {
+                display: block;
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
