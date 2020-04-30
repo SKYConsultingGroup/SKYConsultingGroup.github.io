@@ -21,6 +21,7 @@
                 float: left;
                 display: block;
                 padding: 0.5em 2em;
+                color: $scg_grey;
 
                 transition: 0.4s;
 
@@ -86,7 +87,12 @@
                 padding: 1em;
             }
 
+            p {
+                padding: 0px 1.0em; 
+            }
+
             .scg_image_box_exerpt {
+                height: 80%;
                 margin-top: 15%;
                 background: $scg_white;
 
@@ -105,7 +111,8 @@
 
             .scg_image_box_heading {
                 background: $scg_white;
-                height: 80%;
+                height: 60%;
+                margin-top: 20%;
             }
         }
 
@@ -137,7 +144,7 @@
                 }
             }
 
-            h2 {
+            h3 {
                 color: $scg_white;
             }
         }
@@ -151,14 +158,14 @@
             span.scg_quick_info_item_bold  {
                 @include base-font
                 font-weight: 300;
-                font-size: 1.8vw;
+                font-size: 2.0vw;
                 color: $scg_dark_grey;
             }
 
             span.scg_quick_info_item {
                 @include base-font
                 font-weight: 200;
-                font-size: 1.8vw;
+                font-size: 2.0vw;
                 color: $scg_grey;
             }
         }
@@ -191,8 +198,8 @@
             text-align: center;
 
             svg {
-                height: 3.3vw;
-                width: 3.3vw;
+                height: 4.0vw;
+                width: 4.0vw;
 
                 fill: $scg_dark_grey;
             }

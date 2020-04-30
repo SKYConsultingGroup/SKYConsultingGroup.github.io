@@ -6,11 +6,15 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    /* Default Layout */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+}
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     .scg_container {
         .scg_header {
             grid-template-columns: 15% auto 10%;
@@ -21,6 +25,10 @@
 
             .scg_nav {
                 display: block;
+
+                a {
+                    font-size: 2.0vw;
+                }
             }
 
             .scg_hamburger {
@@ -33,6 +41,8 @@
         }
 
         .scg_footer {
+            grid-template-columns: 35% auto 35%;
+
             .scg_quick_info {
                 display: block;
 
@@ -42,14 +52,14 @@
                 margin-top: 8em;
 
                 span.scg_copyright {
-                    font-size: 1.4vw;
+                    font-size: 1.6vw;
                 }
 
                 span.scg_legal_links {
-                    font-size: 1.2vw;
+                    font-size: 1.4vw;
 
                     a {
-                        font-size: 1.2vw;
+                        font-size: 1.4vw;
                     }
                 }
             }
@@ -61,12 +71,52 @@
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    /* Font Adjustments */
+    a {
+        font-size: $base-fz-a - 1.0vw;
+    }
+
+    p {
+        font-size: $base-fz-p - 1.0vw;
+    }
+
+    h1 {
+        font-size: $base-fz-h1 - 1.0vw;
+    }
+
+    h2 {
+        font-size: $base-fz-h2 - 1.0vw;
+    }
+
+    h3 {
+        font-size: $base-fz-h3 - 1.0vw;
+    }
+
+    h4 {
+        font-size: $base-fz-h4 - 1.0vw;
+    }
+
+    h5 {
+        font-size: $base-fz-h5 - 1.0vw;
+    }
+
+    .scg_container {
+        .scg_content_container {
+            .scg_image_box {
+                .scg_image_box_exerpt {
+                    grid-row: 1 / span 1;
+                }
+
+                .scg_image_box_heading {
+                    grid-row: 2 / span 1;
+                    height: 80%;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

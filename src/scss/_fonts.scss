@@ -1,53 +1,66 @@
+/* Default font sizes */
+$base-fz-a: 2.8vw;
+$base-fz-p: 2.8vw;
+$base-fz-h1: 4.2vw;
+$base-fz-h2: 3.8vw;
+$base-fz-h3: 3.4vw;
+$base-fz-h4: 3.0vw;
+$base-fz-h5: 2.6vw;
+
 @mixin base-font {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     color: $scg_grey;
 }
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a, p, h1, h2, h3, h4, h5 {
 }
 
 a {
     @include base-font
     text-decoration: none;
     font-weight: 300;
-    font-size: 1.8vw;
-    margin: 0px;
-    padding: 0px;
-}
+    font-size: $base-fz-a;
+    color: $scg_blue;
 
-h1 {
-    @include base-font
-    font-weight: 600;
-    font-size: 2.8vw;
-}
-
-h2 {
-    @include base-font
-    font-weight: 500;
-    font-size: 2.1vw;
-}
-
-h3 {
-    @include base-font
-    font-weight: 400;
-    font-size: 2.0vw;
-}
-
-h4 {
-    @include base-font
-    font-weight: 300;
-}
-
-h5 {
-    @include base-font
-    font-weight: 200;
+    &:hover {
+    }
 }
 
 p {
     @include base-font
     font-weight: 200;
-    font-size: 1.7vw;
-    padding: 1.0em;
-    margin: 0px;
+    font-size: $base-fz-p;
+    padding: 0.1em;
 }
+
+h1 {
+    @include base-font
+    font-weight: 600;
+    font-size: $base-fz-h1;
+}
+
+h2 {
+    @include base-font
+    font-weight: 500;
+    font-size: $base-fz-h2;
+}
+
+h3 {
+    @include base-font
+    font-weight: 400;
+    font-size: $base-fz-h3;
+}
+
+h4 {
+    @include base-font
+    font-weight: 300;
+    font-size: $base-fz-h4;
+}
+
+h5 {
+    @include base-font
+    font-weight: 200;
+    font-size: $base-fz-h5;
+}
+
